@@ -108,9 +108,7 @@
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Great+Vibes" rel="stylesheet">
 
   <style type="text/css">
-    body{
-      background-image: url('background.jpg')
-    }
+    
     #box{
       background-color: rgba(255,255,255,0.6);
       padding: 10%;
@@ -174,7 +172,7 @@
     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
+    <img src="cake.png" alt="">
   </div>
 
 </body>
