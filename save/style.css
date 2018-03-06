@@ -1,0 +1,15 @@
+#link{
+	float: left;
+	margin: 10px;
+}
+.form-inline{
+	margin: 5px;
+}
+.btn{
+	margin-left: 10px; 
+}
+.form_div{
+	float: right;
+	width: 40%;
+	margin: 20px;
+}

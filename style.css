@@ -1,0 +1,41 @@
+#link{
+	float: left;
+	margin: 10px;
+}
+.form-inline{
+	margin: 5px;
+}
+.btn{
+	margin-left: 10px; 
+}
+.form_div{
+	float: right;
+	width: 40%;
+	margin: 20px;
+}
+#sign-out{
+	float: right;
+	margin: 20px;
+}
+#aT{
+	float: right;
+	margin: 10px;
+}
+td{
+	text-align: center;
+}
+th{
+	text-align: center;
+}
+.table_index{
+	width: 40%;
+}
+.table_index th{
+	padding: 4px;
+	text-align: center;
+}
+header{
+	background-color: black;
+	color: #F06F02;
+	padding-left: 20px;
+}
