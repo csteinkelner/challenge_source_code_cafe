@@ -7,6 +7,9 @@
 	$res=mysqli_query($conn, "SELECT * FROM users WHERE userId=".$_SESSION['user']);
 
 	$userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
+
+	$data_bos = $userRow['admin'];
+
 ?>
 
 <?php 
@@ -43,7 +46,7 @@ require_once 'parts/head.php';
 <div class="manageUser">
     
     <h3>Free:</h3>
-    <table border="1" cellspacing="0" cellpadding="0">
+    <table class="table" >
         <thead>
             <tr>
                 <th>Table</th>
@@ -58,9 +61,10 @@ require_once 'parts/head.php';
 	            $sql = "SELECT * FROM tables WHERE reservation = 0";
 	            $result = $conn->query($sql);
 
-	            if($result->num_rows > 0) {
+	            if($result->num_rows > 0) { //für admin
 	                while($row = $result->fetch_assoc()) {
-	                    echo "<tr>
+	                    if ($data_bos == 1) {
+	                    	echo "<tr>
 	                        <td>".$row['id']."</td>
 	                        <td>".$row['capacity']."</td>
 	                        <td>
@@ -68,15 +72,24 @@ require_once 'parts/head.php';
 	                            <a href='delete.php?id=".$row['id']."'><button type='button'>Delete</button></a>
 	                        </td>
 	                    </tr>";
+	                    } else{echo "<tr>
+	                        <td>".$row['id']."</td>
+	                        <td>".$row['capacity']."</td>
+	                        <td>
+	                            <a href='update.php?id=".$row['id']."'><button type='button'>Edit</button></a>
+	                        </td>
+	                    </tr>";
+	                	}
+	                    
 	                }
-	            } else {
+	            }else {
 	                echo "<tr><td colspan='5'><center>No Data Avaliable</center></td></tr>";
 	            }
             ?>
         </tbody>
     </table>
     <h3>Taken:</h3>
-    <table border="1" cellspacing="0" cellpadding="0">
+    <table class="table">
 		<!-- the inactive -->
 		<thead>
             <tr>
@@ -94,15 +107,23 @@ require_once 'parts/head.php';
 
 	            if($result->num_rows > 0) {
 	                while($row = $result->fetch_assoc()) {
-	                    echo "<tr>
+	                    if ($data_bos == 1) {
+	                    	echo "<tr>
 	                        <td>".$row['id']."</td>
 	                        <td>".$row['capacity']."</td>
 	                        <td>
 	                            <a href='update.php?id=".$row['id']."'><button type='button'>Edit</button></a>
 	                            <a href='delete.php?id=".$row['id']."'><button type='button'>Delete</button></a>
 	                        </td>
-	                        
 	                    </tr>";
+	                    } else{echo "<tr>
+	                        <td>".$row['id']."</td>
+	                        <td>".$row['capacity']."</td>
+	                        <td>
+	                            <a href='update.php?id=".$row['id']."'><button type='button'>Edit</button></a>
+	                        </td>
+	                    </tr>";
+	                	}
 	                }
 	            } else {
 	                echo "<tr><td colspan='5'><center>No Data Avaliable</center></td></tr>";
@@ -110,7 +131,12 @@ require_once 'parts/head.php';
             ?>
         </tbody>
     </table>
-    <a href="create.php"><button type="button" class="btn" id="aT">Add Table</button></a>
+    <?php 
+    	if ($data_bos == 1) {
+    	echo "<a href='create.php'><button type='button' class='btn' id='aT'>Add Table</button></a>";
+    	} 
+    ?>
+   
 </div>
 
 </body>

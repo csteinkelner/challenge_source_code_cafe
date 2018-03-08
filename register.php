@@ -113,7 +113,14 @@ require_once 'parts/head.php';
   </style>
 </head>
 <body>
-<?php require_once 'parts/header_for_back.php'; ?>
+<header id="header" class="">
+		<div class="row">
+			<div class="col-md-5">
+				<h1>Source_Code_Café</h1>
+			</div>
+			
+		</div>
+</header><!-- /header -->
  	<div class="container">
     	<div class="row">
 			<div class="col-lg-4 col-md-4 col-4"></div>
