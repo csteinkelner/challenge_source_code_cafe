@@ -14,11 +14,9 @@ if($_GET['id']) {
 
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-
-    <title>Edit Tables</title>
+<?php 
+require_once 'parts/head.php';
+?>
 
     <style type="text/css">
         fieldset {
@@ -27,13 +25,14 @@ if($_GET['id']) {
             width: 50%;
         }
 
-        table tr th {
+        tr{
             padding-top: 20px;
+            margin: 20px;
         }
     </style>
 </head>
 <body>
-
+<?php require_once 'parts/header_for_back.php'; ?>
 <fieldset>
     <legend>Update Tables</legend>
 
@@ -44,13 +43,13 @@ if($_GET['id']) {
                 <td><input type="text" name="capacity" placeholder="capacity" value="<?php echo $data['capacity'] ?>" /></td>
             </tr>  
             <tr>
-                <th>Reservation</th>
+                <th>Taken</th>
                 <td><input type="text" name="reservation" placeholder="0 or 1" value="<?php echo $data['reservation'] ?>" /></td>
             </tr>
             <tr>
                 <input type="hidden" name="id" value="<?php echo $data['id']?>" />
-                <td><button type="submit">Save Changes</button></td>
-                <td><a href="home.php"><button type="button">Back</button></a></td>
+                <td><button type="submit" class="btn">Save Changes</button></td>
+                <td><a href="home.php"><button type="button" class="btn">Back</button></a></td>
             </tr>
         </table>
     </form>
@@ -62,3 +61,4 @@ if($_GET['id']) {
 <?php
 }
 ?>
+

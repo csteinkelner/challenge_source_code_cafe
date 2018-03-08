@@ -45,5 +45,35 @@ header{
 }
 .container{
 	background-color: white;
-	height: 800px;
+	height: 700px;
+	margin: 10px;
+	border-radius: 5px;
+}
+#linka{
+	color: #F06F02;
+}
+img{
+	width: 100%;
+	margin-top: 30px;
+}
+.mainArea{
+	margin-top: 20px;
+}
+footer{
+	background-color: black;
+	color: #F06F02;
+	height: 15%;
+}
+.jumbotron{
+	background-image: url('cafe_muster.jpg');
+
+}
+.jumbotron h1{
+	color: #F06F02;
+}
+#white{
+	background-color: rgba(255,255,255,0.7);
+	width: 60%;
+	height: 90%;
+	border-radius: 5px;
 }

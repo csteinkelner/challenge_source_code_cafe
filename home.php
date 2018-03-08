@@ -9,25 +9,9 @@
 	$userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-
-    <title>PHP CRUD</title>
-
-	<link rel="stylesheet" type="text/css" href="style.css">
-
-	<!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<!-- font -->
-	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Great+Vibes" rel="stylesheet">
-
+<?php 
+require_once 'parts/head.php';
+?>
     <style type="text/css">
         .manageUser {
             width: 50%;
@@ -42,7 +26,8 @@
 
 </head>
 <body>
-	<header id="header" class="">
+
+<header id="header" class="">
 		<div class="row">
 			<div class="col-md-5">
 				<h1>Welcome to Source Code, <?php echo $userRow['userName']; ?>!</h1>
@@ -53,10 +38,7 @@
 				</button>
 			</div>
 		</div>
-			
-			
-	</header><!-- /header -->
-	
+</header><!-- /header -->	
 				
 <div class="manageUser">
     
@@ -85,7 +67,6 @@
 	                            <a href='update.php?id=".$row['id']."'><button type='button'>Edit</button></a>
 	                            <a href='delete.php?id=".$row['id']."'><button type='button'>Delete</button></a>
 	                        </td>
-	                        
 	                    </tr>";
 	                }
 	            } else {

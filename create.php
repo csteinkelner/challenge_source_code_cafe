@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-
-    <title>PHP CRUD  |  Add Table</title>
-
+<?php 
+require_once 'parts/head.php';
+?>
     <style type="text/css">
         fieldset {
             margin: auto;
@@ -17,7 +14,7 @@
     </style>
 </head>
 <body>
-
+<?php require_once 'parts/header_for_back.php'; ?>
 	<fieldset>
 
 	    <legend>Add Table</legend>

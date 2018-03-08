@@ -83,35 +83,15 @@
 
     $data = $result->fetch_assoc();
 
-    // echo $data["hhh"];
+    // echo $data["conny"];
     // $conn->close();
 
+  require_once 'parts/head.php';
+
 ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Login & Registration System</title>
-
-  <link rel="stylesheet" type="text/css" href="style.css">
-
-  <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- font -->
-  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Great+Vibes" rel="stylesheet">
-
-  <style type="text/css">
-    
-    #box{
-      background-color: rgba(255,255,255,0.6);
-      padding: 10%;
+<style type="text/css">
+    body{
+      background-image: url('cafe.jpg')
     }
   </style>
 </head>
@@ -121,11 +101,11 @@
   <header id="header" class="">
     <div class="row">
       <div class="col-lg-4 col-md-4 col-4">
-        <h1>Tables</h1>
+        <h1>&ltSource_Code_Café&gt</h1>
       </div>
       <div class="form_div">
           <div id="link">
-            <a href="register.php">Sign Up Here...</a>
+            <a href="register.php" id="linka">Sign Up Here...</a>
           </div>
         <form class="form-inline" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
 
@@ -156,23 +136,37 @@
   </header><!-- /header -->
 
   <div class="container">
+    <div class="row mainArea">
+      <div class="col-md-5 col-lg-5">
+        <h1>We have <?php echo $data["conny"]; ?> free Tables!</h1>
 
-    <h1>We have <?php echo $data["conny"]; ?> free Tables!</h1>
-
-    <h3>Free:</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <img src="cake.png" alt="">
+        <h3>Welcom!</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="col-md-6 col-lg-6">
+        <img src="cake.png" alt="">
+      </div>
+    </div>
+    <div class="jumbotron">
+      <div id="white">
+        <h1>Contact us!</h1>
+        <p>
+          <a class="btn btn-lg" href="#" role="button">Email@gmail.com</a>
+          Rechte Wienzeile 39, 1040 Wien
+        </p>
+      </div>
+    </div>
   </div>
 
 </body>

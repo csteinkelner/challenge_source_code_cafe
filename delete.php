@@ -12,13 +12,12 @@ if($_GET['id']) {
     $conn->close();
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Delete Table</title>
+<?php 
+require_once 'parts/head.php';
+?>
 </head>
 <body>
-
+<?php require_once 'parts/header_for_back.php'; ?>
 	<h3>Do you really want to delete this table?</h3>
 
 	<form action="actions/a_delete.php" method="post">
